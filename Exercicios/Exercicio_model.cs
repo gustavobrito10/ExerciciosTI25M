@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
@@ -14,6 +15,12 @@ namespace Exercicios
         private int num2;
         private double num3;
         private double num4;
+        private int num5;
+        private int num6;
+        private int num7;
+        private double lado1;
+        private double lado2;
+        private double lado3;
         private int resultado;
 
         //Método Construtor: Instância as variáveis na memória
@@ -152,6 +159,81 @@ namespace Exercicios
         {
             return Raiz(Getnum4());
         }//fim da Raiz
+
+        public string Exercicio01(int ano)
+        {
+            if(ano % 4 == 0)
+            {
+                return ano + " o ano é bissexto";
+
+            }
+            else
+            {
+                return ano + " não é bissexto";
+            }
+        }//Fim exercicio01
+
+        public string Exercicio02(int num5)
+        {
+            if(num5 >= 100 && num5 <=200)
+            {
+                return num5 + " Este número está entre 100 e 200. ";
+            }
+            else
+            {
+                return num5 + " Este número não está entre 100 e 200. ";
+            }
+        }//fim Exercicio02
+
+        public string Exercicio03(int num6)
+        {
+            if (num6 < 16)
+            {
+                return num6 + " Você não tem idade para votar. ";
+            }
+            else if ((num6 >= 16 && num6 < 18) || num6 >= 70)
+            {
+                return num6 + " Voto Facultativo.";
+            }
+            else
+            {
+                return num6 + " Voto obrigatório.";
+            }
+        }//fim Exercicio03
+
+        public string Exercicio04(int num7)
+        {
+            if ((num7 >= 10 && num7 <= 18))
+            {
+                return num7 + " O número está dentro do intervalo. ";
+            }
+            else
+            {
+                return num7 + " O número não está dentro do intervalo";
+            }
+        }//fim Exercicio04
+
+        public string Exercicio06(double lado1, double lado2, double lado3)
+        {
+            if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1)
+            {
+                return " Triângulo Equilátero (todos os lados são iguais).";
+            }
+            else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3)
+            {
+                return "Triângulo Isósceles (dois lados são iguais).";
+            }
+            else
+            {
+                return "Triângulo Escaleno (todos os lados são diferentes).";
+            }
+            
+        }
+
+
+        
+        
+    
 
         
 
