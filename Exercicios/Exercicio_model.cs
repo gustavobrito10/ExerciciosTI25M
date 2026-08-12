@@ -26,6 +26,11 @@ namespace Exercicios
         private int num12;
         private int num13;
         private int num14;
+        private int num15;
+        private int num16;
+        private int num17;
+        private int num18;
+        private int num19;
         private int hora1;
         private int hora2;
         private double lado1;
@@ -317,7 +322,7 @@ namespace Exercicios
         {
             if (hora1 > hora2)
             {
-                return " O Srimeiro horário é mais tarde";
+                return " O primeiro horário é mais tarde";
             }
             else if (hora1 < hora2)
             {
@@ -341,7 +346,41 @@ namespace Exercicios
             }
         }//fim Exercicio10
 
-        
+        public string Exercicio11(int num15, int num16, int num17, int num18, int num19)
+        {
+            double media = (num15 + num16 + num17 + num18 + num19) / 5.0;
+            return media.ToString() + " A média é: ";
+        }//fim do Exercicio 11
+
+        public string Exercicio12()
+        {
+            int soma = 0;
+
+            while (soma <= 100)
+            {
+                Console.Write($"Soma atual [{soma}]. Digite um número para somar: ");
+                int numero = Convert.ToInt32(Console.ReadLine());
+
+                soma += numero;
+            }
+
+            return $" A soma total foi {soma} e ultrapassou 100!";
+        }//fim Exercicio12
+
+        public string Exercicio13(string senhaCriada, string senhaDigitada)
+        {
+            if (senhaCriada == null || senhaCriada.Length < 2)
+            {
+                return " Erro: A senha criada precisa ter pelo menos 2 caracteres!";
+            }
+            while (senhaDigitada != senhaCriada)
+            {
+                Console.WriteLine(" Senha incorreta! : ");
+                senhaDigitada = Console.ReadLine();
+            }
+
+            return " Senha válida! Acesso permitido.";
+        }
 
 
 

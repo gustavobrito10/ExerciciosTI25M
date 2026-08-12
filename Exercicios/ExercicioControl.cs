@@ -75,7 +75,10 @@ namespace Exercicios
                               "15. Exercicio07\n" +
                               "16. Exercicio08\n" +
                               "17. Exercicio09\n" +
-                              "18. Exercicio10\n");
+                              "18. Exercicio10\n" +
+                              "19. Exercicio11\n" +
+                              "20. Exercicio12\n" +
+                              "21. Exercicio13\n");
             SetOpcao(Convert.ToInt32(Console.ReadLine()));
         }//fim do menu
 
@@ -253,6 +256,43 @@ namespace Exercicios
 
                         Console.WriteLine(" O maior número é: " + Resultado);
                         break;
+                    case 19:
+                        Console.WriteLine(" Informe o primeiro número: ");
+                        int num15 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine(" Informe o segundo número: ");
+                        int num16 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine(" Informe o terceiro número: ");
+                        int num17 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine(" Informe o quarto número: ");
+                        int num18 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine(" Informe o quinto número: ");
+                        int num19 = Convert.ToInt32(Console.ReadLine());
+
+                        // Mostrar a média
+
+                        Console.WriteLine(this.modelo.Exercicio11(num15, num16, num17, num18, num19));
+                        break;
+                    case 20:
+                        string resultadoSoma = this.modelo.Exercicio12();
+                        Console.WriteLine(resultadoSoma);
+                        break;
+                    case 21:
+                        Console.WriteLine(" Crie uma senha (mínimo 2 caracteres): ");
+                        string senhaCriada = Console.ReadLine();
+
+                        Console.WriteLine(" Digite a senha para validar: ");
+                        string senhaDigitada = Console.ReadLine();
+
+                        // Envia as duas senhas para o modelo comparar
+                        Console.WriteLine(this.modelo.Exercicio13(senhaCriada, senhaDigitada));
+                        break;
+
+
+
                 }//fim da escolha
             } while (GetOpcao() != 0);//fim...while
         }//fim do método executar menu
