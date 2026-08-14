@@ -380,13 +380,9 @@ namespace Exercicios
             }
 
             return " Senha válida! Acesso permitido.";
-        }
+        }//fim Exercicio13
 
-
-
-
-
-
+        //Inicio Exercicios Estruturas Condicionais e de Repetição
 
 
 

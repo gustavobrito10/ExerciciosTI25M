@@ -66,7 +66,7 @@ namespace Exercicios
                               "6. Potência com Parâmetros\n" +
                               "7. Raiz\n" +
                               "8. Raiz com Parâmetros\n" +
-                              "9. Exercício 01\n" +
+                              "9. Exercício01\n" +
                               "10. Exercicio02\n" +
                               "11. Exercicio03\n" +
                               "12. Exercicio04\n" +
@@ -78,7 +78,15 @@ namespace Exercicios
                               "18. Exercicio10\n" +
                               "19. Exercicio11\n" +
                               "20. Exercicio12\n" +
-                              "21. Exercicio13\n");
+                              "21. Exercicio13\n" +
+
+                              "29. Exercicio01\n" +
+                              "30. Exercicio02\n" +
+                              "31. Exercicio03\n" +
+                              "32. Exercicio04\n" +
+                              "33. Exercicio05\n" +
+                              "34. Exercicio06\n");
+
             SetOpcao(Convert.ToInt32(Console.ReadLine()));
         }//fim do menu
 
@@ -272,8 +280,6 @@ namespace Exercicios
                         Console.WriteLine(" Informe o quinto número: ");
                         int num19 = Convert.ToInt32(Console.ReadLine());
 
-                        // Mostrar a média
-
                         Console.WriteLine(this.modelo.Exercicio11(num15, num16, num17, num18, num19));
                         break;
                     case 20:
@@ -286,8 +292,6 @@ namespace Exercicios
 
                         Console.WriteLine(" Digite a senha para validar: ");
                         string senhaDigitada = Console.ReadLine();
-
-                        // Envia as duas senhas para o modelo comparar
                         Console.WriteLine(this.modelo.Exercicio13(senhaCriada, senhaDigitada));
                         break;
 
