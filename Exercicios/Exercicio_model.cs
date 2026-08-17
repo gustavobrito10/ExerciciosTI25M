@@ -31,6 +31,13 @@ namespace Exercicios
         private int num17;
         private int num18;
         private int num19;
+        private int num20;
+        private int num21;
+        private int num22;
+        private int num23;
+        private int num24;
+        private int num25;
+        private int num26;
         private int hora1;
         private int hora2;
         private double lado1;
@@ -384,7 +391,121 @@ namespace Exercicios
 
         //Inicio Exercicios Estruturas Condicionais e de Repetição
 
+        //Leia um número inteiro e retornar todos os múltiplos menores que 100
+        public string multiplo(int numero)
+        {
+            //Contador
+            int i = 1;//Criando o contador e definindo o ponto de partida
+            string resultado = "";
+            while (i < 100)
+            {
+                if (numero % i == 0)
+                {
+                    resultado += i + "\n";
+                }
+                //Rodar o meu contador
+                i++;
+            }//fim do while
+            return resultado;
+        }//fim do método 01
+
+        public string multiploFor(int numero)
+        {
+            string resultado = "";
+            for (int i = 1; i < 100; i++)
+            {
+                if (numero % i == 0)
+                {
+                    resultado += i + "\n";
+                }//fim do if
+            }//fim do for
+            return resultado;
+        }//fim do método 02
+
+        //Leia um número e verifique se ele é palíndromo(ex: 121, 1331, 1441, 0660)
+        public bool EhPalindromo(string palin)
+        {
+            int fim = palin.Length - 1;//Meço o tamanho de um conjunto de caracteres
+            int inicio = 0;
+            while (inicio < fim)
+            {
+                if (palin.Substring(inicio, 1) != palin.Substring(fim, 1))
+                {
+                    return false;
+                }
+                inicio++;
+                fim--;
+            }//fim do while
+            return true;
+        }//fim do método 03
+
+        //Solicite ao usuário 10 números e conte os pares e ímpares
+        public void ContarParImpar()
+        {
+            int contarPar = 0;
+            int contarImpar = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write(i + 1 + "° número: ");
+                int num = Convert.ToInt32(Console.ReadLine());
+                //Comparações
+                if (num % 2 == 0)
+                {
+                    contarPar++;
+                }
+                else
+                {
+                    contarImpar++;
+                }
+            }//fim do for
+            Console.WriteLine("A quantidade de pares é: " + contarPar + "\nA quantidade de ímpares é: " + contarImpar);
+        }//fim do parImpar 04
+
+        public bool Exercicio05(int senhaDigitada)
+        {
+            int senhaCorreta = 2805;
+            return senhaDigitada == senhaCorreta;
+        }//fim Exercicio05
+
+        public double Exercicio06(int num21, int num22, int num23, int num24, int num25)
+        {
+            double soma = 0;
+            int qtd = 0;
+
+            if (num21 >= 18)
+            {
+                soma += num21;
+                qtd++;
+            }
+            if (num22 >= 18)
+            {
+                soma += num22;
+                qtd++;
+            }
+            if (num23 >= 18)
+            {
+                soma += num23;
+                qtd++;
+            }
+            if (num24 >= 18)
+            {
+                soma += num24;
+                qtd++;
+            }
+            if (num25 >= 18)
+            {
+                soma += num25;
+                qtd++;
+            }
+            if (qtd == 0) return 0;
+            return soma / qtd;
+        }//fim Exercicio06
+
+        public bool Exercicio7(int numero)
+        {
+            return numero < 0;
+        }
 
 
     }//fim da classe
-}//fim do projeto
+}//fim do projeto.

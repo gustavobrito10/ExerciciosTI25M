@@ -85,7 +85,8 @@ namespace Exercicios
                               "31. Exercicio03\n" +
                               "32. Exercicio04\n" +
                               "33. Exercicio05\n" +
-                              "34. Exercicio06\n");
+                              "34. Exercicio06\n" +
+                              "35. Exercicio07\n");
 
             SetOpcao(Convert.ToInt32(Console.ReadLine()));
         }//fim do menu
@@ -294,6 +295,102 @@ namespace Exercicios
                         string senhaDigitada = Console.ReadLine();
                         Console.WriteLine(this.modelo.Exercicio13(senhaCriada, senhaDigitada));
                         break;
+
+                    //Estruturas Condicionais e de Repetição
+
+                    case 29:
+                        Console.WriteLine("Informe um número: ");
+                        int num29 = Convert.ToInt32(Console.ReadLine());
+                        //Mostrar resultado da operação
+                        Console.WriteLine(this.modelo.multiplo(num29));
+                        break;
+                    case 30:
+                        Console.WriteLine("Informe um número: ");
+                        num29 = Convert.ToInt32(Console.ReadLine());
+                        //Mostrar resultado da operação
+                        Console.WriteLine(this.modelo.multiploFor(num29));
+                        break;
+                    case 31:
+                        Console.WriteLine("Informe um número: ");
+                        string palin = Console.ReadLine();
+                        if (this.modelo.EhPalindromo(palin) == false)
+                        {
+                            Console.WriteLine("Não é palíndromo.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("É palíndromo.");
+                        }
+                        break;
+                    case 32:
+                        this.modelo.ContarParImpar();
+                        break;
+                    case 33:
+                        bool acertou = false;
+                        for (int tentativa = 1; tentativa <= 3; tentativa++)
+                        {
+                            Console.Write($"Tentativa {tentativa} de 3 - Digite a senha: ");
+                            int senha = Convert.ToInt32(Console.ReadLine());
+
+                            if (this.modelo.Exercicio05(senha))
+                            {
+                                Console.WriteLine("Senha correta! Acesso permitido.");
+                                acertou = true;
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Senha incorreta!");
+                            }
+                        }
+
+                        if (!acertou)
+                        {
+                            Console.WriteLine(" Acesso bloqueado. Limite máximo de tentativas atingido");
+                        }
+                        break;
+                    case 34:
+                        Console.WriteLine("Informe a primeira idade: ");
+                        int num21 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe a segunda idade: ");
+                        int num22 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe a terceira idade: ");
+                        int num23 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe a quarta idade: ");
+                        int num24 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe a quinta idade: ");
+                        int num25 = Convert.ToInt32(Console.ReadLine());
+
+                        double media = this.modelo.Exercicio06(num21, num22, num23, num24, num25);
+
+                        if (media > 0)
+                        {
+                            Console.WriteLine("A média dos maiores de idade é: " + media);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Não foram digitadas idades maiores de 18.");
+                        }
+                        break;
+                    case 35:
+                        bool continuar = true;
+
+                        while (continuar)
+                        {
+                            Console.Write(" Informe um número: ");
+                            int num26 = Convert.ToInt32(Console.ReadLine());
+                            if (this.modelo.Exercicio7(num26))
+                            {
+                                Console.WriteLine(" Numero negativo. Programa finalizado! ");
+                                continuar = false;
+                            }
+                        }
+                        break;
+
 
 
 
