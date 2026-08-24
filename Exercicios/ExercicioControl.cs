@@ -86,7 +86,14 @@ namespace Exercicios
                               "32. Exercicio04\n" +
                               "33. Exercicio05\n" +
                               "34. Exercicio06\n" +
-                              "35. Exercicio07\n");
+                              "35. Exercicio07\n" +
+                              "36. Exercicio08\n" +
+
+                              "37. Exercicio01\n"+
+                              "38. Exercicio01\n" +
+                              "39. Exercicio02\n" +
+                              "40. Exercicio03\n" +
+                              "41. Exercicio04\n");
 
             SetOpcao(Convert.ToInt32(Console.ReadLine()));
         }//fim do menu
@@ -391,9 +398,32 @@ namespace Exercicios
                         }
                         break;
 
+                    case 36:
+                        this.modelo.ContarParImpar();
+                        break;
 
+                    case 37:
+                        this.modelo.preencherVetor();
+                        this.modelo.MostrarVetor();
+                        break;
 
+                    case 38:
+                        this.modelo.preencherVetor();
+                        Console.WriteLine("Informe um número para procurar no vetor: ");
+                        int num71 = Convert.ToInt32(Console.ReadLine());
+                        //Chamar o método de procura
+                        Console.WriteLine(this.modelo.procurarNumero(num71));
+                        break;
+                    case 39:
+                        this.modelo.VetorInversa();
+                        break;
+                    case 40:
+                        this.modelo.ParVetor();
+                        break;
 
+                    case 41:
+                        this.modelo.MediaVetor();
+                        break;
                 }//fim da escolha
             } while (GetOpcao() != 0);//fim...while
         }//fim do método executar menu

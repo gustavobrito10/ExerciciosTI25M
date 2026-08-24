@@ -44,6 +44,7 @@ namespace Exercicios
         private double lado2;
         private double lado3;
         private int resultado;
+        public int[] vet;//Criando um vetor
 
         //Método Construtor: Instância as variáveis na memória
 
@@ -506,6 +507,111 @@ namespace Exercicios
             return numero < 0;
         }
 
+        //Vetores
+        //Preencher o Vetor
+        public void preencherVetor()
+        {
+            this.vet = new int[10];//instanciando
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i + 1 + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+        }//fim do preencherVetor
+
+        public void MostrarVetor()
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i+ 1 + "ª Posição: " + this.vet[i]);
+            }//Fim do for
+        }//Fim do método mostrar
+
+        public string procurarNumero(int num)
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                if (vet[i] == num)
+                {
+                    return "O número esta na posição: " + (i + 1);
+                }
+            }//fim do for
+            return "O " + num + "Não foi encontrado no vetor";
+        }
+
+        public void VetorInversa()
+        {
+            this.vet = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write(i + 1 + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+            for (int i = 9; i >= 0; i--)
+            {
+                Console.WriteLine(vet[i]);
+            }//fim do for
+        }//fim da Ordem Inversa 
+public void ParVetor() 
+
+        {
+
+            this.vet = new int[10];
+
+            for (int i = 0; i < 10; i++)
+
+            {
+
+                Console.Write(i + 1 + "ª Número" +
+                    ": ");
+
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+
+            }//fim do for
+
+            for (int i = 0; i < 10; i++)
+
+            {
+
+                if (this.vet[i] % 2 == 0)
+
+                {
+
+                    Console.WriteLine(this.vet[i]);
+
+                }//fim do if
+
+            }//fim do for
+
+        }//fim do ParVetor
+
+        public void MediaVetor()
+
+        {
+
+            this.vet = new int[10];
+
+            int soma = 0;
+
+            double media;
+
+            for (int i = 0; i < 10; i++)
+
+            {
+
+                Console.Write(i + 1 + "ª Número: ");
+
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+
+                soma += this.vet[i];
+
+            }//fim do for
+
+            media = (double)soma / 10;
+
+            Console.WriteLine("Média: " + media);
+
+        }//fim do MediaVetor
 
     }//fim da classe
 }//fim do projeto.
