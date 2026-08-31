@@ -16,8 +16,6 @@ namespace Exercicios
             this.modelo = new Exercicio_model();
             SetOpcao(0);
         }//Conastrutor Padrão
-
-       
         private int GetOpcao()
         {
             return this.opcao;
@@ -80,7 +78,7 @@ namespace Exercicios
                               "20. Exercicio12\n" +
                               "21. Exercicio13\n" +
 
-                              "29. Exercicio01\n" +
+                              "\n29. Exercicio01\n" +
                               "30. Exercicio02\n" +
                               "31. Exercicio03\n" +
                               "32. Exercicio04\n" +
@@ -89,11 +87,15 @@ namespace Exercicios
                               "35. Exercicio07\n" +
                               "36. Exercicio08\n" +
 
-                              "37. Exercicio01\n"+
+                              "\n37. Exercicio01\n"+
                               "38. Exercicio01\n" +
                               "39. Exercicio02\n" +
                               "40. Exercicio03\n" +
-                              "41. Exercicio04\n");
+                              "41. Exercicio04\n" +
+                              "42. Exercicio05\n" +
+                              "43. Exercicio06\n" +
+                              "44. Exercicio07\n" +
+                              "45. Exercicio08\n");
 
             SetOpcao(Convert.ToInt32(Console.ReadLine()));
         }//fim do menu
@@ -350,7 +352,6 @@ namespace Exercicios
                                 Console.WriteLine("Senha incorreta!");
                             }
                         }
-
                         if (!acertou)
                         {
                             Console.WriteLine(" Acesso bloqueado. Limite máximo de tentativas atingido");
@@ -397,16 +398,13 @@ namespace Exercicios
                             }
                         }
                         break;
-
                     case 36:
                         this.modelo.ContarParImpar();
                         break;
-
                     case 37:
                         this.modelo.preencherVetor();
                         this.modelo.MostrarVetor();
                         break;
-
                     case 38:
                         this.modelo.preencherVetor();
                         Console.WriteLine("Informe um número para procurar no vetor: ");
@@ -420,10 +418,33 @@ namespace Exercicios
                     case 40:
                         this.modelo.ParVetor();
                         break;
-
                     case 41:
                         this.modelo.MediaVetor();
                         break;
+                    case 42:
+
+                        this.modelo.NomesComA();
+
+                        break;
+
+                    case 43:
+
+                        this.modelo.MaiorMedia();
+
+                        break;
+
+                    case 44:
+
+                        this.modelo.MaiorIdade();
+
+                        break;
+
+                    case 45:
+
+                        this.modelo.MediaAltura();
+
+                        break;
+
                 }//fim da escolha
             } while (GetOpcao() != 0);//fim...while
         }//fim do método executar menu

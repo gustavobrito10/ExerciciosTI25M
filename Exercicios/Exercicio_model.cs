@@ -525,7 +525,7 @@ namespace Exercicios
             {
                 Console.WriteLine(i+ 1 + "ª Posição: " + this.vet[i]);
             }//Fim do for
-        }//Fim do método mostrar
+        }//Fim do método mostrar exercicio08
 
         public string procurarNumero(int num)
         {
@@ -537,7 +537,7 @@ namespace Exercicios
                 }
             }//fim do for
             return "O " + num + "Não foi encontrado no vetor";
-        }
+        }//Fim Exercicio01
 
         public void VetorInversa()
         {
@@ -551,7 +551,7 @@ namespace Exercicios
             {
                 Console.WriteLine(vet[i]);
             }//fim do for
-        }//fim da Ordem Inversa 
+        }//fim da Ordem Inversa Exercicio02
 public void ParVetor() 
 
         {
@@ -562,8 +562,7 @@ public void ParVetor()
 
             {
 
-                Console.Write(i + 1 + "ª Número" +
-                    ": ");
+                Console.Write(i + 1 + "ª Número" + ": ");
 
                 this.vet[i] = Convert.ToInt32(Console.ReadLine());
 
@@ -583,7 +582,7 @@ public void ParVetor()
 
             }//fim do for
 
-        }//fim do ParVetor
+        }//fim do ParVetor Exercicio03
 
         public void MediaVetor()
 
@@ -611,7 +610,98 @@ public void ParVetor()
 
             Console.WriteLine("Média: " + media);
 
-        }//fim do MediaVetor
+        }//fim do MediaVetor Exercicio04
+
+        public string NomesComA()
+        {
+            string[] nomes = new string[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write((i + 1) + "ª Posição: ");
+                nomes[i] = Console.ReadLine();
+            }//fim do for
+            for (int i = 0; i < 10; i++)
+            {
+                if (nomes[i][0] == 'A' || nomes[i][0] == 'a')
+                {
+                    Console.WriteLine(nomes[i]);
+                }//fim do if
+            }//fim do for
+            return "";
+        }//fim do NomesComA
+
+        public void MaiorMedia()
+        {
+            this.vet = new int[10];
+            int soma = 0;
+            double media;
+            int contador = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write(i + 1 + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+                soma += this.vet[i];
+            }//fim do for
+
+            media = (double)soma / 10;
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (this.vet[i] > media)
+                {
+                    contador++;
+                }//fim do if
+            }// fim do for
+
+            Console.WriteLine("Média: " + media);
+            Console.WriteLine("Quantidade de números maiores que a média: " + contador);
+        }//fim do MaiorMedia
+
+        public void MaiorIdade()
+        {
+            this.vet = new int[10];
+            int idade = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write(i + 1 + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (this.vet[i] > idade)
+                {
+                    idade = this.vet[i];
+                }//fim do if
+            }//fim do for
+
+            Console.WriteLine("Maior idade: " + idade);
+        }//fim do MaiorIdade
+
+        public void MediaAltura()
+        {
+            this.vet = new int[10];
+            double altura = 0;
+            double media = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write((i + 1) + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            for (int i = 0; i < 10; i++)
+            {
+                altura += this.vet[i];
+            }//fim do for
+
+            media = altura / 10;
+
+            Console.WriteLine("Média das alturas: " + media);
+        }//fim do MediaAltura
 
     }//fim da classe
 }//fim do projeto.
