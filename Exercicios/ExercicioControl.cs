@@ -95,7 +95,14 @@ namespace Exercicios
                               "42. Exercicio05\n" +
                               "43. Exercicio06\n" +
                               "44. Exercicio07\n" +
-                              "45. Exercicio08\n");
+                              "45. Exercicio08\n" +
+                              "46. Exercicio09\n" +
+                              "47. Exercicio10\n" +
+                              "48. Exercicio11\n" +
+                              "49. Exercicio12\n" +
+                              "50. Exercicio13\n" +
+                              "51. Exercicio14\n" +
+                              "52. Exercicio15");
 
             SetOpcao(Convert.ToInt32(Console.ReadLine()));
         }//fim do menu
@@ -422,27 +429,39 @@ namespace Exercicios
                         this.modelo.MediaVetor();
                         break;
                     case 42:
-
                         this.modelo.NomesComA();
-
                         break;
-
                     case 43:
-
                         this.modelo.MaiorMedia();
-
                         break;
-
                     case 44:
-
                         this.modelo.MaiorIdade();
 
                         break;
-
                     case 45:
-
                         this.modelo.MediaAltura();
 
+                        break;
+                    case 46:
+                        this.modelo.MenorSalario();
+                        break;
+                    case 47:
+                        this.modelo.MultiplosDe5();
+                        break;
+                    case 48:
+                        this.modelo.DoisVetores();
+                        break;
+                    case 49:
+                        this.modelo.MaiorMenor();
+                        break;
+                    case 50:
+                        this.modelo.Repetidos();
+                        break;
+                    case 51:
+                        this.modelo.SomaDoisVetores();
+                        break;
+                    case 52:
+                        this.modelo.MultDoisVetores();
                         break;
 
                 }//fim da escolha

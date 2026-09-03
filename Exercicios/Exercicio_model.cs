@@ -44,6 +44,7 @@ namespace Exercicios
         private double lado2;
         private double lado3;
         private int resultado;
+        public int[] vet2;
         public int[] vet;//Criando um vetor
 
         //Método Construtor: Instância as variáveis na memória
@@ -702,6 +703,193 @@ public void ParVetor()
 
             Console.WriteLine("Média das alturas: " + media);
         }//fim do MediaAltura
+
+        public void MenorSalario()
+        {
+            this.vet = new int[10];
+            double quantidade = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write((i + 1) + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (this.vet[i] < 1200)
+                {
+                    quantidade++;
+                }//fim do if
+            }//fim do for
+
+            Console.WriteLine(" Salários abaixo de R$ 1.200: " + quantidade);
+        }//fim do MenorSalario
+
+        public void MultiplosDe5()
+        {
+            this.vet = new int[10];
+            int quantidade = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write((i + 1) + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (this.vet[i] % 5 == 0)
+                {
+                    quantidade++;
+                }//fim do if
+            }//fim do for
+
+            Console.WriteLine("Quantidade de múltiplos de 5: " + quantidade);
+        }//fim do MultiplosDe5
+        public void DoisVetores()
+        {
+            this.vet = new int[10];
+
+            int[] pares = new int[10];
+            int[] impares = new int[10];
+
+            int contarPar = 0;
+            int contarImpar = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write((i + 1) + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+
+                if (this.vet[i] % 2 == 0)
+                {
+                    pares[contarPar] = this.vet[i];
+                    contarPar++;
+                }
+                else
+                {
+                    impares[contarImpar] = this.vet[i];
+                    contarImpar++;
+                }//fim do if
+            }//fim do for
+
+            Console.WriteLine("\nNúmeros pares:");
+
+            for (int i = 0; i < contarPar; i++)
+            {
+                Console.Write(pares[i] + " ");
+            }//fim do for
+
+            Console.WriteLine("\n\nNúmeros ímpares:");
+
+            for (int i = 0; i < contarImpar; i++)
+            {
+                Console.Write(impares[i] + " ");
+            }//fim do for
+        }//fim do DoisVetores
+
+        public void MaiorMenor()
+        {
+            this.vet = new int[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write((i + 1) + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            Array.Sort(this.vet);//Ordena do menor para o maior (crescente)
+            Array.Reverse(this.vet);//Inverte a ordem, do maior para o menor (decrescente)
+
+            Console.WriteLine("\nValores ordenados do maior para o menor:");
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(this.vet[i]);
+            }//fim do for
+        }//fim do MaiorMenor
+        public void Repetidos()
+        {
+            this.vet = new int[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write((i + 1) + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            Console.WriteLine("\nValores repetidos encontrados:");
+            bool temRepetido = false;
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = i + 1; j < 10; j++)
+                {
+                    if (this.vet[i] == this.vet[j])
+                    {
+                        Console.WriteLine("Número: " + this.vet[i]);
+                        temRepetido = true;
+                        break;
+                    }//fim do if
+                }//fim do for
+            }//fim do for
+
+            if (!temRepetido)
+            {
+                Console.WriteLine("Nenhum número foi repetido.");
+            }//fim do if
+        }//fim do Repetidos
+
+        public void SomaDoisVetores()
+        {
+            this.vet = new int[10];
+            this.vet2 = new int[10];
+            int soma = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write((i + 1) + "ª Posição (Vetor 1): ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            for (int j = 0; j < 10; j++)
+            {
+                Console.Write((j + 1) + "ª Posição (Vetor 2): ");
+                this.vet2[j] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            for (int i = 0; i < 10; i++)
+            {
+                soma += this.vet[i] + this.vet2[i];
+            }//fim do for
+
+            Console.WriteLine("Soma total: " + soma);
+        }//fim do SomaDoisVetores
+
+        public void MultDoisVetores()
+        {
+            this.vet = new int[10];
+            this.vet2 = new int[10];
+            int[] vetResultado = new int[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write((i + 1) + "ª Posição (Vetor 1): ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            for (int j = 0; j < 10; j++)
+            {
+                Console.Write((j + 1) + "ª Posição (Vetor 2): ");
+                this.vet2[j] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            for (int i = 0; i < 10; i++)
+            {
+                vetResultado[i] = this.vet[i] * this.vet2[i];
+                Console.WriteLine((i + 1) + "ª Posição da Multiplicação: " + vetResultado[i]);
+            }//fim do for
+        }//fim do MultDoisVetores
 
     }//fim da classe
 }//fim do projeto.
