@@ -102,7 +102,10 @@ namespace Exercicios
                               "49. Exercicio12\n" +
                               "50. Exercicio13\n" +
                               "51. Exercicio14\n" +
-                              "52. Exercicio15");
+                              "52. Exercicio15\n" +
+                              "53. Exercicio16\n" +
+                              "54. Exercicio17\n" +
+                              "55. Exercicio18\n");
 
             SetOpcao(Convert.ToInt32(Console.ReadLine()));
         }//fim do menu
@@ -462,6 +465,15 @@ namespace Exercicios
                         break;
                     case 52:
                         this.modelo.MultDoisVetores();
+                        break;
+                    case 53:
+                        this.modelo.SomaElementosVetor();
+                        break;
+                    case 54:
+                        this.modelo.MaiorPosicao();
+                        break;
+                    case 55:
+                        this.modelo.AlunosENotas();
                         break;
 
                 }//fim da escolha

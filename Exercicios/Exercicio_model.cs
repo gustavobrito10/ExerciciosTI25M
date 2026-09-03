@@ -890,6 +890,79 @@ public void ParVetor()
                 Console.WriteLine((i + 1) + "ª Posição da Multiplicação: " + vetResultado[i]);
             }//fim do for
         }//fim do MultDoisVetores
+        public void SomaElementosVetor()
+        {
+            this.vet = new int[10];
+            int soma = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write((i + 1) + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            for (int i = 0; i < 10; i++)
+            {
+                soma += this.vet[i];
+            }//fim do for
+
+            Console.WriteLine("A soma de todos os elementos é: " + soma);
+        }//fim do SomaElementosVetor
+
+        public void MaiorPosicao()
+        {
+            this.vet = new int[10];
+            int maior;
+            int posicao = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write((i + 1) + "ª Posição: ");
+                this.vet[i] = Convert.ToInt32(Console.ReadLine());
+            }//fim do for
+
+            maior = this.vet[0];
+            posicao = 0;
+
+            for (int i = 1; i < 10; i++)
+            {
+                if (this.vet[i] > maior)
+                {
+                    maior = this.vet[i];
+                    posicao = i;
+                }//fim do if
+            }//fim do for
+
+            Console.WriteLine();
+            Console.WriteLine($"O maior número digitado foi {maior}.");
+            Console.WriteLine($"Ele se encontra na posição real {posicao + 1} (correspondente ao índice {posicao} do vetor).");
+        }//fim do Maior Posição
+
+        public string AlunosENotas()
+        {
+            string[] nomes = new string[10];
+            this.vet = new int[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write($"Digite o nome do {i + 1}º aluno: ");
+                nomes[i] = Console.ReadLine();
+
+                Console.Write($"Digite a nota de {nomes[i]}: ");
+                this.vet[i] = int.Parse(Console.ReadLine());
+            }//fim do for
+
+            Console.WriteLine("\nAlunos com nota acima de 7");
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (this.vet[i] > 7)
+                {
+                    Console.WriteLine($"{nomes[i]} (Nota: {this.vet[i]})");
+                }//fim do if
+            }//fim do for
+            return "";
+        }//fim do AlunosENotas
 
     }//fim da classe
 }//fim do projeto.
